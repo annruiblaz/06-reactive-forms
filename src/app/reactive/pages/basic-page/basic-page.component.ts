@@ -32,7 +32,7 @@ export class BasicPageComponent implements OnInit{
     //this.basicForm.reset(rtx5090);
   }
 
-  isValidField(field: string) {
+  isInvalidField(field: string) {
     return this.basicForm.controls[field].errors && this.basicForm.controls[field].touched;
   }
 
