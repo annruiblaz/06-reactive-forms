@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ValidatorsService } from '../../../shared/services/validators.service';
 
 @Component({
   selector: 'app-switches-page',
@@ -18,7 +19,10 @@ export class SwitchesPageComponent implements OnInit {
     wantNotifications: false
   }
 
-   constructor(private fb: FormBuilder) {}
+   constructor(
+    private fb: FormBuilder,
+    private validatorsService: ValidatorsService
+  ) {}
 
    ngOnInit(): void {
      this.switchesForm.reset(this.person);
@@ -39,7 +43,6 @@ export class SwitchesPageComponent implements OnInit {
    }
 
   isInvalidField(field: string) {
-    return this.switchesForm.controls[field].errors && this.switchesForm.controls[field].touched;
+    return this.validatorsService.isInvalidField(this.switchesForm, field );
   }
-
 }
