@@ -102,10 +102,10 @@
 <pre>{{ 'formulario' | json }}</pre>
 
 <h5>Nombre</h5>
-<pre>{{ registerForm.value.name | json }}</pre>
+<pre>{{ registerForm.controls['name'].errors  | json }}</pre>
 
 <h5>Email</h5>
-<pre>{{ registerForm.value.email | json }}</pre>
+<pre>{{ registerForm.controls['email'].errors | json }}</pre>
 
 <h5>Username</h5>
 <pre>{{ registerForm.controls['username'].errors| json }}</pre>
