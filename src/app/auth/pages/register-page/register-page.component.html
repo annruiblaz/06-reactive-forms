@@ -99,13 +99,13 @@
 
 <div class="row mt-4">
 
-    <div class="col-6">
+    <div class="col-7 mt-4">
         <pre class="bg-dark text-white p-2 rounded">{{ 'formulario' | json }}</pre>
 
         <h5>Nombre</h5>
         <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['name'].errors | json }}</pre>
 
-        <h5>Em4il</h5>
+        <h5>Email</h5>
         <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['email'].errors | json }}</pre>
 
         <h5>Username</h5>
@@ -118,11 +118,15 @@
         <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['password2'].errors | json }}</pre>        
     </div>
 
-    <div class="col-6">
-        <h4>Form Valid: {{registerForm.valid}} </h4>
-        <h4>Form Status: {{registerForm.status}} </h4>
-        <h4>Form Pending: {{registerForm.pending}} </h4>
-        <h4>Form errors: {{registerForm.errors}} </h4>
+    <div class="col-5 mt-4">
+        <h5>Form Valid:</h5>
+        <span>{{registerForm.valid}}</span>
+        <h5>Form Status:</h5>
+        <span>{{registerForm.status}}</span>
+        <h5>Form Pending:</h5>
+        <span>{{registerForm.pending}}</span>
+        <h5>Form errors:</h5>
+        <span>{{registerForm.errors}}</span>
     </div>
 
 
