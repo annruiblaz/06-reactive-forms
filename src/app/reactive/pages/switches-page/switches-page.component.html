@@ -83,20 +83,23 @@
 
 </form>
 
+<div class="row mt-2">
+    <div class="col">
+        <h5>Valor del formulario</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ switchesForm.value | json }}</pre>
+        <br>
 
-<h5>Valor del formulario</h5>
-<pre>{{ switchesForm.value | json }}</pre>
-<br>
+        <h5>Persona</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ 'object' | json }}</pre>
+        <br>
 
-<h5>Persona</h5>
-<pre>{{ 'object' | json }}</pre>
-<br>
+        <h5>Valid</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ switchesForm.valid| json }}</pre>
 
-<h5>Valid</h5>
-<pre>{{ switchesForm.valid| json }}</pre>
+        <!-- <h5>Términos</h5> -->
+        <!-- <pre>{{ myForm.controls?.terminos?.errors | json }}</pre> -->
 
-<!-- <h5>Términos</h5> -->
-<!-- <pre>{{ myForm.controls?.terminos?.errors | json }}</pre> -->
-
-<!-- <br>
-<pre>Condiciones: </pre> -->
+        <!-- <br>
+        <pre>Condiciones: </pre> -->
+    </div>
+</div>

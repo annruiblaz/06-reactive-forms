@@ -97,25 +97,36 @@
     </div>
 </div>
 
+<div class="row mt-4">
 
-<h2>Form Valid: {{registerForm.valid}} </h2>
-<h2>Form Status: {{registerForm.status}} </h2>
-<h2>Form Pending: {{registerForm.pending}} </h2>
-<h2>Form errors: {{registerForm.errors}} </h2>
-<pre>{{ 'formulario' | json }}</pre>
+    <div class="col-6">
+        <pre class="bg-dark text-white p-2 rounded">{{ 'formulario' | json }}</pre>
 
-<h5>Nombre</h5>
-<pre>{{ registerForm.controls['name'].errors  | json }}</pre>
+        <h5>Nombre</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['name'].errors | json }}</pre>
 
-<h5>Email</h5>
-<pre>{{ registerForm.controls['email'].errors | json }}</pre>
+        <h5>Em4il</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['email'].errors | json }}</pre>
 
-<h5>Username</h5>
-<pre>{{ registerForm.controls['username'].errors | json }}</pre>
+        <h5>Username</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['username'].errors | json }}</pre>
+
+        <h5>Password</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['password'].errors | json }}</pre>
+
+        <h5>Confirmar</h5>
+        <pre class="bg-dark text-white p-2 rounded">{{ registerForm.controls['password2'].errors | json }}</pre>        
+    </div>
+
+    <div class="col-6">
+        <h4>Form Valid: {{registerForm.valid}} </h4>
+        <h4>Form Status: {{registerForm.status}} </h4>
+        <h4>Form Pending: {{registerForm.pending}} </h4>
+        <h4>Form errors: {{registerForm.errors}} </h4>
+    </div>
 
 
-<h5>Password</h5>
-<pre>{{ registerForm.controls['password'].errors | json }}</pre>
 
-<h5>Confirmar</h5>
-<pre>{{ registerForm.controls['password2'].errors | json }}</pre>
+</div>
+
+
