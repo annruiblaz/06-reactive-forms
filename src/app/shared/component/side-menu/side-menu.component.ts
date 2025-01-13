@@ -22,7 +22,7 @@ export class SideMenuComponent {
   ];
 
   public selectorsMenu: MenuItem[] = [
-    { title: 'Primero', route: './select'}
+    { title: 'Selectores anidados', route: './select'}
   ];
 
 }

@@ -6,8 +6,8 @@ const routes: Routes = [
     {
         path: '',
         children: [
-            { path: 'contruies', component: SelectorPageComponent},
-            { path: '**', redirectTo: 'contruies'},
+            { path: 'countries', component: SelectorPageComponent},
+            { path: '**', redirectTo: 'countries'},
         ]
     }
 ];
