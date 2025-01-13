@@ -2,6 +2,18 @@
 
 <hr>
 
+<h3 class="mt-3">Validaciones</h3>
+
+<ul class="list-group">
+    <li *ngFor="let item of authMenu"
+        class="list-group-item"
+        [routerLink]="item.route"
+        routerLinkActive="active"
+    >
+        {{item.title}}
+    </li>
+</ul>
+
 <h3 class="mt-3">Reactive</h3>
 
 <ul class="list-group">
@@ -14,10 +26,10 @@
     </li>
 </ul>
 
-<h3 class="mt-3">Validaciones</h3>
+<h3 class="mt-3">Selectores múltiples</h3>
 
 <ul class="list-group">
-    <li *ngFor="let item of authMenu"
+    <li *ngFor="let item of selectorsMenu"
         class="list-group-item"
         [routerLink]="item.route"
         routerLinkActive="active"
@@ -25,3 +37,4 @@
         {{item.title}}
     </li>
 </ul>
+

@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
+    path: 'select',
+    loadChildren: () => import('./select/select.module').then(m => m.SelectModule)
+  },
+  {
     path: '**',
     redirectTo: 'reactive'
   }
