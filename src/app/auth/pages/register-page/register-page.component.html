@@ -29,9 +29,12 @@
                             formControlName="email"
                             class="form-control"
                             placeholder="Email del usuario">
-                    <span *ngIf="isInvalidField('email')" class="form-text text-danger">
+<!--                     <span *ngIf="isInvalidField('email')" class="form-text text-danger">
                         mensaje de error del email
-                    </span>
+                    </span> -->
+                    <span *ngIf="registerForm.controls['email'].hasError('emailTaken')" class="form-text text-danger">
+                        Este correo ya está siendo utilizado
+                    </span>                    
                 </div>
             </div>
 
@@ -108,11 +111,11 @@
 <pre>{{ registerForm.controls['email'].errors | json }}</pre>
 
 <h5>Username</h5>
-<pre>{{ registerForm.controls['username'].errors| json }}</pre>
+<pre>{{ registerForm.controls['username'].errors | json }}</pre>
 
 
 <h5>Password</h5>
-<pre>{{ registerForm.value.password | json }}</pre>
+<pre>{{ registerForm.controls['password'].errors | json }}</pre>
 
 <h5>Confirmar</h5>
-<pre>{{ registerForm.value.password2 | json }}</pre>
+<pre>{{ registerForm.controls['password2'].errors | json }}</pre>
